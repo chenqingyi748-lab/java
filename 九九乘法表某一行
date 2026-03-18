@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("你想看幾的乘法表？請輸入數字：");
+        int n = scanner.nextInt();
+
+        System.out.println("--- 這是 " + n + " 的乘法表 ---");
+
+        // 乘法表通常是到 9，所以迴圈跑 1 到 9
+        for (int i = 1; i <= 9; i++) {
+            // 計算結果
+            int result = n * i;
+
+            // 串接字串並印出：數字 * 迴圈數 = 結果
+            System.out.println(n + " * " + i + " = " + result);
+        }
+
+        scanner.close();
+    }
+}
