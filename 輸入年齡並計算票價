@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class TicketSystem {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int age;
+
+        while (true) {   // 無限迴圈
+
+            System.out.print("請輸入您的年齡(輸入-1離開): ");
+            age = scanner.nextInt();
+
+            if (age == -1) {
+                System.out.println("程式結束");
+                break;   // 跳出迴圈
+            }
+
+            if (age <= 5 || age >= 75) {
+                System.out.println("免費進入");
+            }
+            else if (age <= 45) {
+                System.out.println("台幣500元整");
+            }
+            else {
+                System.out.println("成人台幣1000元整");
+            }
+
+        }
+
+        scanner.close();
+    }
+}
