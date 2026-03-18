@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("請輸入一個整數：");
+        int number = scanner.nextInt();
+
+        // 第一層：判斷奇偶
+        if (number % 2 == 0) {
+            System.out.println(number + " 是偶數。");
+
+            // 第二層：只有是偶數時，才進一步判斷是否為 10 的倍數
+            if (number % 10 == 0) {
+                System.out.println("而且它也是 10 的倍數！");
+            } else {
+                System.out.println("但它不是 10 的倍數。");
+            }
+
+        } else {
+            System.out.println(number + " 是奇數。");
+        }
+
+        scanner.close();
+    }
+}
