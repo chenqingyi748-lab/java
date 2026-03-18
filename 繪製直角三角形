@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("請輸入三角形的高度 h：");
+        int h = scanner.nextInt();
+
+        // 外層迴圈：負責控制「第幾行」
+        for (int i = 1; i <= h; i++) {
+
+            // 內層迴圈：負責控制「這行有幾個 *」
+            // 關鍵：j 的上限是由外層的 i 決定的！
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*"); // 注意！這裡是用 print，不換行
+            }
+
+            // 當內層星號印完後，換到下一行
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
