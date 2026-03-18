@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("請輸入一個正整數 n：");
+        int n = scanner.nextInt();
+
+        int sum = 0; // 這是我們的「籃子」，用來存總和
+
+        // 使用 for 迴圈從 1 跑到 n
+        for (int i = 1; i <= n; i++) {
+            sum += i; // 相當於 sum = sum + i;
+            // 為了讓你看到過程，可以取消下面這行的註解
+            // System.out.println("加上 " + i + " 後，目前總和是：" + sum);
+        }
+
+        System.out.println("從 1 加到 " + n + " 的總和是：" + sum);
+
+        scanner.close();
+    }
+}
