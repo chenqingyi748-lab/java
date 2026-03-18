@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("請輸入年齡(輸入0結束)：");
+            int age = scanner.nextInt();
+
+            if (age == 0) {
+                System.out.println("程式結束");
+                break;   // 跳出迴圈
+            }
+
+            if (age >= 18) {
+                System.out.println("已成年");
+            } else {
+                System.out.println("未成年");
+            }
+        }
+
+    }
+}
