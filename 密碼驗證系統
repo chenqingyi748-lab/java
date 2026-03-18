@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int secret = 1234; // 預設的正確密碼
+
+        System.out.print("請輸入密碼：");
+        int input = scanner.nextInt();
+
+        // 只要輸入的數字「不等於」正確密碼，就一直跑迴圈
+        while (input != secret) {
+            System.out.println("❌ 密碼錯誤，請再試一次！");
+
+            System.out.print("請輸入密碼：");
+            input = scanner.nextInt(); // 關鍵！更新 input 的值，讓 while 重新檢查
+        }
+
+        // 跳出迴圈，代表 input == secret 成立了
+        System.out.println("✅ 登入成功！歡迎回來。");
+
+        scanner.close();
+    }
+}
