@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] scores = new int[5];
+
+        // 1. 輸入階段：利用迴圈填滿陣列
+        for (int i = 0; i < scores.length; i++) {
+            System.out.print("請輸入第 " + (i + 1) + " 位學生的成績：");
+            scores[i] = scanner.nextInt();
+        }
+
+        // 2. 核心邏輯：尋找最大值
+        int max = scores[0]; // 先假設第一個位置 [0] 是目前最強的「擂主」
+
+        // 從第二個位置 [1] 開始比到最後
+        for (int i = 1; i < scores.length; i++) {
+            if (scores[i] > max) { // 如果發現有人比現在的 max 還大
+                max = scores[i];   // 換人當大魔王，更新 max 的值
+            }
+        }
+
+        // 3. 輸出結果
+        System.out.println("-----------------------");
+        System.out.println("這組成績中的最高分是：" + max);
+
+        scanner.close();
+    }
+}
