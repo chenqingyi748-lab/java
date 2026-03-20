@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char c = ' '; // 初始值
+
+        while (c != '5') {
+            System.out.println("\n請輸入服務項目編號：1.提款 2.轉帳 3.餘額查詢 4.其他服務 5.離開 => ");
+
+            // 使用 scanner 讀取字串的第一個字元，這樣最穩！
+            String input = scanner.next();
+            c = input.charAt(0);
+
+            switch (c) {
+                case '1':
+                    System.out.println(">> 執行：提款");
+                    break;
+                case '2':
+                    System.out.println(">> 執行：轉帳");
+                    break;
+                case '3':
+                    System.out.println(">> 執行：餘額查詢");
+                    break;
+                case '4':
+                    System.out.println(">> 執行：其他服務");
+                    break;
+                case '5':
+                    System.out.println(">> 感謝使用，正在離開...");
+                    break;
+                default:
+                    System.out.println("❌ 輸入錯誤，請重新輸入 1-5 之間的數字。");
+            }
+        }
+        scanner.close();
+    }
+}
