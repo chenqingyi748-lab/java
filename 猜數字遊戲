@@ -1,0 +1,23 @@
+ import java.util.Random;
+ import java.util.Scanner;
+ void main(String[] args) {
+    Random random = new Random();
+    int number = random.nextInt(100) + 1;
+    System.out.println(number);
+    Scanner scanner = new Scanner(System.in);
+    while (true) {
+        System.out.print("請輸入1~100的數字");
+        int guess = scanner.nextInt();
+        if (guess>number) {
+            System.out.println("少一點");
+        } else if (guess<number) {
+            System.out.println("多一點");
+        } else {
+            System.out.println("就是你");
+            break;
+        }
+    }
+}
+
+
+
