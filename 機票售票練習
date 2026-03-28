@@ -1,0 +1,37 @@
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("請輸入機票票價 => ");
+    int ticket = scanner.nextInt();
+    System.out.println("請輸入月份 => ");
+    int month = scanner.nextInt();
+    System.out.println("請輸入購買機位 0 頭等艙 1 經濟艙");
+    int place = scanner.nextInt();
+//先用月份淡,旺季if判斷
+    if (month >= 5 && month <= 10) {
+        //旺季
+        if (place == 0) {
+            //頭等艙
+            ticket = (int) (ticket * 0.9);
+        } else if (place == 1) {
+            //經濟艙
+            ticket = (int) (ticket * 0.85);
+        } else {
+            System.out.println("沒有機位");
+        }
+    } else if ((month >= 1 && month <= 4) || (month >= 11 && month <= 12)) {
+        //淡季
+        if (place == 0) {
+            //頭等艙
+            ticket = (int) (ticket * 0.7);
+        } else if (place == 1) {
+            //經濟艙
+            ticket = (int) (ticket * 0.65);
+        } else {
+            System.out.println("沒有機位");
+        }
+    } else{
+        System.out.println("請輸入正確月份");
+    }
+
+System.out.println(ticket);
+}
