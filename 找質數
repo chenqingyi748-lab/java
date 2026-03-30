@@ -1,0 +1,44 @@
+public static void main(String[] args) {
+    /*
+    1.找質數
+  int i = 23;
+  boolean flag = true;
+  for (int j = 2; j < i; j++){
+    //j表示2~99之間的每個數字
+    if (i % j == 0){
+        flag = false;
+        break;
+    }
+  }
+  if (flag){
+      System.out.println("是質數");
+  }else {
+      System.out.println("不是質數");
+  }
+}
+   */
+    //2.用雙迴圈,找質數
+    //定義一個變量統計有多少個質數
+    int count = 0;
+    //外迴圈,判斷101~200這範圍,得到這範圍之內的每個數字
+    for (int i = 101; i < 200; i++) {
+        //i表示循環中的每個數字
+
+        //判斷i是否為一個質數
+        boolean flag = true;
+        //內迴圈,判斷當前數字是否為一個質數
+        for (int j = 2; j < i; j++) {
+            //j表示2~99之間的每個數字
+            if (i % j == 0) {
+                flag = false;
+                //跳出單層循環,內循環
+                break;
+            }
+        }
+        if (flag) {
+            System.out.println(+i+"是質數");
+            count++;
+        }
+    }
+    System.out.println("一共有"+ count +"個質數");
+}
