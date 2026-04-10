@@ -1,0 +1,17 @@
+public static void main(String[] args) {
+        //求最大
+    //1.定義數組用來存放5個值
+    int[] arr = {33,5,22,44,55};
+    //2.定義一個變量max儲存最大值
+    int max = arr[0];
+    //3.循環獲取數組中的每一個元素
+    //拿每個元素跟max做比較
+    for (int i = 0; i < arr.length; i++){
+        //i 索引  arr[i] 元素
+        if (arr[i] > max){
+            max = arr[i];
+        }
+    }
+    //4.當循環結束後,max紀錄的就是數組中最大值
+        System.out.println(max);
+ }
